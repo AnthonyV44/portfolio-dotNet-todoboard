@@ -1,0 +1,6 @@
+@VforV.Portfolio.DotNet.ToDoBoard.WebApi_HostAddress = http://localhost:5134
+
+GET {{VforV.Portfolio.DotNet.ToDoBoard.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

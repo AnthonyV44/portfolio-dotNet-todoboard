@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VforV.Portfolio.DotNet.ToDoBoard.Entity", "VforV.Portfolio.DotNet.ToDoBoard.Entity\VforV.Portfolio.DotNet.ToDoBoard.Entity.csproj", "{79B9D1CD-DC9A-4C22-91AB-75CD9D295536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VforV.Portfolio.DotNet.ToDoBoard.Domain", "VforV.Portfolio.DotNet.ToDoBoard.Domain\VforV.Portfolio.DotNet.ToDoBoard.Domain.csproj", "{4280E94B-9E2D-4434-B73C-E8175362E1FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VforV.Portfolio.DotNet.ToDoBoard.Domain.Model", "VforV.Portfolio.DotNet.ToDoBoard.Domain.Model\VforV.Portfolio.DotNet.ToDoBoard.Domain.Model.csproj", "{A8ED2A55-7D76-4341-A939-13C723A01925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VforV.Portfolio.DotNet.ToDoBoard.WebApi", "VforV.Portfolio.DotNet.ToDoBoard.WebApi\VforV.Portfolio.DotNet.ToDoBoard.WebApi.csproj", "{989C2943-07D0-47D7-8781-127996146DAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VforV.Portfolio.DotNet.ToDoBoard.Entity.Model", "VforV.Portfolio.DotNet.ToDoBoard.Entity.Model\VforV.Portfolio.DotNet.ToDoBoard.Entity.Model.csproj", "{0A95207D-AA62-49A4-AC85-7B04310EAE0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model", "VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model\VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.csproj", "{C776A4F6-2966-489E-A26A-65FF93C607FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface", "VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface\VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface.csproj", "{A1FCFFA0-BDA4-43F8-8EFA-3464158CCF50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{DEFC8035-F7FC-45E2-A79C-F1277682EF6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{C2F42E77-B82C-4843-AD3D-56A808DFC45B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{01A526E5-CA17-4979-AF6A-8CDA1081C4F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VforV.Portfolio.DotNet.ToDoBoard.Entity.Interface", "VforV.Portfolio.DotNet.ToDoBoard.Entity.Interface\VforV.Portfolio.DotNet.ToDoBoard.Entity.Interface.csproj", "{4688B5A6-27DA-44C0-B6C7-899982F8B6F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79B9D1CD-DC9A-4C22-91AB-75CD9D295536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B9D1CD-DC9A-4C22-91AB-75CD9D295536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B9D1CD-DC9A-4C22-91AB-75CD9D295536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B9D1CD-DC9A-4C22-91AB-75CD9D295536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4280E94B-9E2D-4434-B73C-E8175362E1FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4280E94B-9E2D-4434-B73C-E8175362E1FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4280E94B-9E2D-4434-B73C-E8175362E1FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4280E94B-9E2D-4434-B73C-E8175362E1FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8ED2A55-7D76-4341-A939-13C723A01925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8ED2A55-7D76-4341-A939-13C723A01925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8ED2A55-7D76-4341-A939-13C723A01925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8ED2A55-7D76-4341-A939-13C723A01925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{989C2943-07D0-47D7-8781-127996146DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{989C2943-07D0-47D7-8781-127996146DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{989C2943-07D0-47D7-8781-127996146DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{989C2943-07D0-47D7-8781-127996146DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A95207D-AA62-49A4-AC85-7B04310EAE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A95207D-AA62-49A4-AC85-7B04310EAE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A95207D-AA62-49A4-AC85-7B04310EAE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A95207D-AA62-49A4-AC85-7B04310EAE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C776A4F6-2966-489E-A26A-65FF93C607FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C776A4F6-2966-489E-A26A-65FF93C607FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C776A4F6-2966-489E-A26A-65FF93C607FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C776A4F6-2966-489E-A26A-65FF93C607FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FCFFA0-BDA4-43F8-8EFA-3464158CCF50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FCFFA0-BDA4-43F8-8EFA-3464158CCF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FCFFA0-BDA4-43F8-8EFA-3464158CCF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FCFFA0-BDA4-43F8-8EFA-3464158CCF50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4688B5A6-27DA-44C0-B6C7-899982F8B6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4688B5A6-27DA-44C0-B6C7-899982F8B6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4688B5A6-27DA-44C0-B6C7-899982F8B6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4688B5A6-27DA-44C0-B6C7-899982F8B6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4280E94B-9E2D-4434-B73C-E8175362E1FD} = {DEFC8035-F7FC-45E2-A79C-F1277682EF6B}
+		{A1FCFFA0-BDA4-43F8-8EFA-3464158CCF50} = {DEFC8035-F7FC-45E2-A79C-F1277682EF6B}
+		{A8ED2A55-7D76-4341-A939-13C723A01925} = {DEFC8035-F7FC-45E2-A79C-F1277682EF6B}
+		{79B9D1CD-DC9A-4C22-91AB-75CD9D295536} = {C2F42E77-B82C-4843-AD3D-56A808DFC45B}
+		{0A95207D-AA62-49A4-AC85-7B04310EAE0A} = {C2F42E77-B82C-4843-AD3D-56A808DFC45B}
+		{989C2943-07D0-47D7-8781-127996146DAB} = {01A526E5-CA17-4979-AF6A-8CDA1081C4F5}
+		{C776A4F6-2966-489E-A26A-65FF93C607FF} = {01A526E5-CA17-4979-AF6A-8CDA1081C4F5}
+		{4688B5A6-27DA-44C0-B6C7-899982F8B6F1} = {C2F42E77-B82C-4843-AD3D-56A808DFC45B}
+	EndGlobalSection
+EndGlobal
