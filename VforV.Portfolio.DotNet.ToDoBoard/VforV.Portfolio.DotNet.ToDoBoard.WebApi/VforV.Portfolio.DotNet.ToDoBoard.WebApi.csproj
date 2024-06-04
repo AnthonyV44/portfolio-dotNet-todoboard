@@ -17,4 +17,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model\VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.csproj" />
+    </ItemGroup>
+
 </Project>
