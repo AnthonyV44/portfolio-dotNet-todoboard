@@ -1,3 +1,6 @@
+using Asp.Versioning;
+using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.v1;
 using VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.v1.Requests;
@@ -5,21 +8,21 @@ using VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.v1.Responses;
 
 namespace VforV.Portfolio.DotNet.ToDoBoard.WebApi.Controllers.v1;
 
-// TODO: version
 [ApiController]
-[Route("[controller]")]
-// [Route("api/v{v:apiVersion}/[controller]")]
-// [ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")]
+[ApiVersion(1.0)]
 [Produces("application/json")]
 [Consumes("application/json")]
 public class BoardController : ControllerBase
 {
+    private readonly IMediator _mediator;
+    private readonly IMapper _mapper;
     private readonly ILogger<BoardController> _logger;
-    // private readonly IMediator _mediator;
-    // private readonly IMapper _mapper;
 
-    public BoardController(ILogger<BoardController> logger)
+    public BoardController(IMediator mediator, IMapper mapper, ILogger<BoardController> logger)
     {
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
@@ -52,7 +55,8 @@ public class BoardController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public Task<ActionResult<Board>> UpdateBoardAsync([FromRoute] Guid identifier,
-        [FromBody] UpdateBoardRequest request)
+        [FromBody]
+        UpdateBoardRequest request)
     {
         throw new NotImplementedException();
     }

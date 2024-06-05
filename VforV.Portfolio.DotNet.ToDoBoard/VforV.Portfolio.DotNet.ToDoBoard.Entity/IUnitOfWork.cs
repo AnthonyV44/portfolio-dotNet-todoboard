@@ -1,7 +1,7 @@
 namespace VforV.Portfolio.DotNet.ToDoBoard.Entity;
 
 public interface IUnitOfWork<TDbContext>
-    where TDbContext : class, IEntityDbContext, IWriteDbContext
+    where TDbContext : class, IEntityDbContext
 {
     Task CompleteAsync();
 

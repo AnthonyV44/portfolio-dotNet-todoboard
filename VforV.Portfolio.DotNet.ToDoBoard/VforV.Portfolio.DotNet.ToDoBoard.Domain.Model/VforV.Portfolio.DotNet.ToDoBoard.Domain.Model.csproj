@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface\VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface.csproj" />
+    </ItemGroup>
+
 </Project>

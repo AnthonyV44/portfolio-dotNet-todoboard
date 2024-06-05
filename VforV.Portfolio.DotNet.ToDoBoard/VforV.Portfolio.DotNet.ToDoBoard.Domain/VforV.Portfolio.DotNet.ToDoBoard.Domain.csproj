@@ -6,4 +6,19 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="13.0.1" />
+      <PackageReference Include="FluentValidation" Version="11.9.1" />
+      <PackageReference Include="MediatR" Version="12.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface\VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface.csproj" />
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Domain.Model\VforV.Portfolio.DotNet.ToDoBoard.Domain.Model.csproj" />
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Entity.Interface\VforV.Portfolio.DotNet.ToDoBoard.Entity.Interface.csproj" />
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Entity.Model\VforV.Portfolio.DotNet.ToDoBoard.Entity.Model.csproj" />
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Entity\VforV.Portfolio.DotNet.ToDoBoard.Entity.csproj" />
+    </ItemGroup>
+
 </Project>

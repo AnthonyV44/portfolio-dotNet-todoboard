@@ -1,3 +1,6 @@
+using Asp.Versioning;
+using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.v1;
 using VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.v1.Requests;
@@ -7,19 +10,20 @@ namespace VforV.Portfolio.DotNet.ToDoBoard.WebApi.Controllers.v1;
 
 // TODO: version
 [ApiController]
-[Route("[controller]")]
-// [Route("api/v{v:apiVersion}/[controller]")]
-// [ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")]
+[ApiVersion(1.0)]
 [Produces("application/json")]
 [Consumes("application/json")]
 public class UserController : ControllerBase
 {
+    private readonly IMediator _mediator;
+    private readonly IMapper _mapper;
     private readonly ILogger<UserController> _logger;
-    // private readonly IMediator _mediator;
-    // private readonly IMapper _mapper;
 
-    public UserController(ILogger<UserController> logger)
+    public UserController(IMediator mediator, IMapper mapper, ILogger<UserController> logger)
     {
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
