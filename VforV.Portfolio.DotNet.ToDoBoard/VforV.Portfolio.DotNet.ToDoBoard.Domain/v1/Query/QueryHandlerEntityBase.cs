@@ -19,6 +19,7 @@ public abstract class QueryHandlerEntityBase<TEntity> : QueryHandlerBase where T
     {
         return await _dbContext
             .Set<T>()
+            .AsNoTracking()
             .SingleOrDefaultAsync(e => e.Identifier == identifier, cancellationToken);
     }
 
@@ -26,6 +27,7 @@ public abstract class QueryHandlerEntityBase<TEntity> : QueryHandlerBase where T
     {
         return await _dbContext
             .Set<TEntity>()
+            .AsNoTracking()
             .ToListAsync(cancellationToken);
     }
 
@@ -35,6 +37,7 @@ public abstract class QueryHandlerEntityBase<TEntity> : QueryHandlerBase where T
         return await _dbContext
             .Set<TEntity>()
             .Where(predicate)
+            .AsNoTracking()
             .ToListAsync(cancellationToken);
     }
 

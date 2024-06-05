@@ -23,6 +23,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface\VforV.Portfolio.DotNet.ToDoBoard.Domain.Interface.csproj" />
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Domain.Model\VforV.Portfolio.DotNet.ToDoBoard.Domain.Model.csproj" />
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Domain\VforV.Portfolio.DotNet.ToDoBoard.Domain.csproj" />
+      <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.Entity\VforV.Portfolio.DotNet.ToDoBoard.Entity.csproj" />
       <ProjectReference Include="..\VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model\VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.csproj" />
     </ItemGroup>
 

@@ -30,15 +30,16 @@ public static class GetBoard
         {
             LogGetEntityAttempt(request.Identifier);
 
-            var userEntity = await _dbContext
+            var boardEntity = await _dbContext
                 .Set<Entity.Model.Board>()
                 .Include(i => i.Owner)
                 .Include(i => i.CreatedByUser)
                 .Include(i => i.ModifiedByUser)
                 .Include(i => i.DeletedByUser)
+                .AsNoTracking()
                 .SingleOrDefaultAsync(e => e.Identifier == request.Identifier, cancellationToken);
 
-            if (userEntity == null)
+            if (boardEntity == null)
             {
                 LogGetEntityNotFound(request.Identifier);
                 throw DomainExceptionBuilder.EntityNotFound<Entity.Model.Board>(request.Identifier);
@@ -46,7 +47,7 @@ public static class GetBoard
 
             LogGetEntityFound(request.Identifier);
 
-            return _mapper.Map<Board>(userEntity);
+            return _mapper.Map<Board>(boardEntity);
         }
     }
 }

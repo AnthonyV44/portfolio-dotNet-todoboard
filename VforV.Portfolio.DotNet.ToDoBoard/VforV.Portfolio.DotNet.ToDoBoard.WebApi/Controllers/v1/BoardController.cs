@@ -2,6 +2,8 @@ using Asp.Versioning;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using VforV.Portfolio.DotNet.ToDoBoard.Domain.v1.Command;
+using VforV.Portfolio.DotNet.ToDoBoard.Domain.v1.Query;
 using VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.v1;
 using VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.v1.Requests;
 using VforV.Portfolio.DotNet.ToDoBoard.WebApi.Model.v1.Responses;
@@ -29,25 +31,42 @@ public class BoardController : ControllerBase
     [HttpGet(Name = "GetBoards")]
     [ProducesResponseType(typeof(GetBoardsResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    public Task<ActionResult<GetBoardsResponse>> GetBoardsAsync()
+    public async Task<ActionResult<GetBoardsResponse>> GetBoardsAsync()
     {
-        throw new NotImplementedException();
+        var query = new GetBoards.Query();
+        var results = await _mediator.Send(query);
+
+        var boards = _mapper.Map<List<Board>>(results);
+        var response = new GetBoardsResponse { Boards = boards };
+
+        return Ok(response);
     }
 
     [HttpGet("{identifier:guid}", Name = "GetBoard")]
     [ProducesResponseType(typeof(Board), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public Task<ActionResult<Board>> GetBoardAsync([FromRoute] Guid identifier)
+    public async Task<ActionResult<Board>> GetBoardAsync([FromRoute] Guid identifier)
     {
-        throw new NotImplementedException();
+        var query = new GetBoard.Query(identifier);
+        var result = await _mediator.Send(query);
+
+        var board = _mapper.Map<Board>(result);
+
+        return Ok(board);
     }
 
     [HttpPost(Name = "CreateBoard")]
     [ProducesResponseType(typeof(Board), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public Task<ActionResult<Board>> CreateBoardAsync([FromBody] CreateBoardRequest request)
+    public async Task<ActionResult<Board>> CreateBoardAsync([FromBody] CreateBoardRequest request)
     {
-        throw new NotImplementedException();
+        var model = _mapper.Map<Domain.Model.Board>(request);
+        var command = new CreateBoard.Command(model);
+        var result = await _mediator.Send(command);
+
+        var board = _mapper.Map<Board>(result);
+
+        return CreatedAtAction(nameof(GetBoard), new { Identifier = board.Identifier }, board);
     }
 
     [HttpPut("{identifier:guid}", Name = "UpdateBoard")]
